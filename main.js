@@ -30,10 +30,10 @@ setInterval(async () => {
       }
     });
     await sleep(250);
-    iframeDocument.querySelector('a[data-controltype="submit"]').dispatchEvent(new Event('click'));
+    iframeDocument.querySelector('a[data-controltype="submit"]').click();
     await sleep(250);
-    iframeDocument.querySelector('a.layui-layer-btn0').dispatchEvent(new Event('click'));
+    iframeDocument.querySelector('a.layui-layer-btn0').click();
   }
   await sleep(250);
-  iframeDocument.querySelector('div.nextcmd').dispatchEvent(new Event('click'));
+  iframeDocument.querySelector('div.nextcmd').click();
 }, 1000); // 1000 可改大，尽量不要改小，最好不要小于 800
