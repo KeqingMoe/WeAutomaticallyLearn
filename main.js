@@ -3,6 +3,7 @@ setInterval(async () => {
   const iframe = document.getElementById('contentFrame');
   const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
   if (iframeDocument.querySelector('div[data-controltype="submitinfo"]')?.textContent == '尚未提交。') {
+    iframeDocument.querySelectorAll('li[data-solution]').forEach(el => el.click());
     const results = iframeDocument.querySelectorAll('div[data-itemtype="result"]');
     results.forEach(result => {
       const solution = result.textContent;
